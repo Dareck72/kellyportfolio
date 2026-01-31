@@ -5,10 +5,14 @@ import Error from "./Error";
 import { faFacebook, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faSubscript } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 const HomeBody = ({ pageset }) => {
   const { data, isLoading, error } = useSite();
-
+  const [moredesc, setmoredesc] = useState(false);
+  const HandleShowmore = () => {
+    setmoredesc((m)=>!m);
+  }
   if (isLoading) {
     return <Loading />;
   }
@@ -70,16 +74,15 @@ const HomeBody = ({ pageset }) => {
         </div>
 
         {/* Roles avec animation stagger */}
-        <div className="md:col-span-9 items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="md:col-span-9 items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-& md:gap-1">
           {[
             { title: "Architectural Assistant", icon: "🏛️" },
             { title: "Architectural Draftsperson", icon: "📐" },
-            { title: "BIM Specialist", icon: "💻" },
-            { title: "CEO of BIM VOX", icon: "👔" },
+            { title: "BIM Interest", icon: "💻" },
           ].map((role, index) => (
             <div 
               key={role.title} 
-              className="space-y-4 h-[15vh]  group/role relative"
+              className="space-y-4 h-[15vh] md:h-[5vh]  group/role relative"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center   gap-4">
@@ -144,11 +147,11 @@ const HomeBody = ({ pageset }) => {
             </div>
             <div className="p-6 leading-relaxed text-white">
               <p className="mb-4">
-                {data && data[0].description}
+                {moredesc ? data[0].description : data[0].description.substring(0, 200) + "..."}
               </p>
-              {/* <button className="text-primary font-semibold hover:underline transition-colors">
-                Show more
-              </button> */}
+              <button onClick={HandleShowmore} className="cursor-pointer text-primary font-semibold hover:underline transition-colors">
+                {moredesc ? "Show less" : "Show more"}
+              </button>
             </div>
           </div>
         </section>
