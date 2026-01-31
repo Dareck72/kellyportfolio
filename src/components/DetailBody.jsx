@@ -114,7 +114,7 @@ const DetailBody = ({ project, isPending }) => {
             onClick={() => navigator("/")}
             className="cursor-pointer flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-all duration-300 hover:-translate-y-1"
           >
-            Retour
+            Back to Home
           </button>
 
           <div className="flex flex-col mx-auto items-end gap-8 mt-8">

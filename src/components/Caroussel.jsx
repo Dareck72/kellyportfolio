@@ -39,19 +39,19 @@ const Carroussel = () => {
     <>
       <div className="h-48 md:h-72 lg:h-96 overflow-hidden relative">
         <div
-          className="absolute inset-0 bg-[url('src/assets/image1.png')] bg-cover bg-center opacity-100 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('public/image1.png')] bg-cover bg-center opacity-100 transition-opacity duration-1000"
           id="slide1"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('src/assets/image2.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('public/image2.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide2"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('src/assets/Greenhouse.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('public/Greenhouse.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide3"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('src/assets/FIFAHouse.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('public/FIFAHouse.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide4"
         ></div>
       </div>
