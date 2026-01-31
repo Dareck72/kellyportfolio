@@ -1,4 +1,4 @@
-import Admin from "./components/admin.jsx";
+import Admin from "./components/Admin.jsx";
 import Connexion from "./components/connexion.jsx";
 import ProjectForm from "./components/ProjectForm.jsx";
 import Home from "./pages/home";
