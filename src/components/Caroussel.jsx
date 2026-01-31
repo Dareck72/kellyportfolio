@@ -39,19 +39,19 @@ const Carroussel = () => {
     <>
       <div className="h-48 md:h-72 lg:h-96 overflow-hidden relative">
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-100 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('src/assets/image1.png')] bg-cover bg-center opacity-100 transition-opacity duration-1000"
           id="slide1"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('src/assets/image2.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide2"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('src/assets/Green house.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide3"
         ></div>
         <div
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
+          className="absolute inset-0 bg-[url('src/assets/FIFA House.png')] bg-cover bg-center opacity-0 transition-opacity duration-1000"
           id="slide4"
         ></div>
       </div>
