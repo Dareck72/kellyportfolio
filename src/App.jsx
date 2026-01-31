@@ -1,15 +1,15 @@
-import Admin from "./components/admin";
-import Connexion from "./components/connexion";
-import ProjectForm from "./components/ProjectForm";
+import Admin from "./components/admin.jsx";
+import Connexion from "./components/connexion.jsx";
+import ProjectForm from "./components/ProjectForm.jsx";
 import Home from "./pages/home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { refreshToken } from "./api/refresh";
 import { useEffect } from "react";
-import DetailsProjectPage from "./pages/DetailProject";
-import EditProject from "./pages/EditProject";
-import Fouter from "./components/Footer";
+import DetailsProjectPage from "./pages/DetailProject.jsx";
+import EditProject from "./pages/EditProject.jsx";
+import Fouter from "./components/Footer.jsx";
 
 const queryClient = new QueryClient(); // ✅ INSTANCE
 
