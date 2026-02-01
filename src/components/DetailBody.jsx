@@ -4,6 +4,7 @@ import MediaFormat from "./mediaFormat";
 import Skeleton from "./Skeleton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArchway, faCalendarAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import HorizontalScroll from "./H";
 
 const DetailBody = ({ project, isPending }) => {
   const navigator = useNavigate();
@@ -167,11 +168,23 @@ const DetailBody = ({ project, isPending }) => {
           <h3 className="text-white text-xl font-light mb-6">
             Project Details
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+<HorizontalScroll >
+  {project.medias.map((media, index) => (
+      <MediaFormat key={index} media={media} />
+  ))}
+</HorizontalScroll>
+
+
+
+
+
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {project.medias.map((media, index) => (
               <MediaFormat key={index} media={media} />
             ))}
-          </div>
+          </div> */}
         </section>
       </div>
     </div>
