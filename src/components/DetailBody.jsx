@@ -171,7 +171,10 @@ const DetailBody = ({ project, isPending }) => {
             
 <HorizontalScroll >
   {project.medias.map((media, index) => (
-      <MediaFormat key={index} media={media} />
+    
+<MediaFormat key={index} media={media} />
+   
+      
   ))}
 </HorizontalScroll>
 

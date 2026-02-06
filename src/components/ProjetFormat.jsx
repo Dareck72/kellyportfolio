@@ -19,7 +19,7 @@ const ProjectFormat = ({ project, pageset }) => {
           </div>
           <div className="flex gap-4 text-custom-gray text-sm mb-4">
             <span className="flex items-center gap-1">
-              <i className="fas fa-user"></i> {project.architect}
+              <i className="fas fa-user"></i> {project.date_realisation.toString().substring(0, 10)}
             </span>
             <span className="flex items-center gap-1">
               <i className="fas fa-calendar"></i> {project.date}

@@ -255,7 +255,7 @@ const Projects = ({ projects }) => {
               className="text-sm text-white/70 hover:text-primary transition-colors ml-2"
               aria-label="Effacer tous les filtres"
             >
-              Tout effacer
+             Clean
             </button>
           </div>
         )}
@@ -264,7 +264,7 @@ const Projects = ({ projects }) => {
         {filteredData.length === 0 && data && data.length > 0 ? (
           <div className="text-center py-12 bg-card-dark rounded-xl border border-custom animate-fade-in">
             <div className="text-white/70 mb-2">
-              Aucun projet ne correspond à vos critères de filtrage
+             Any project found with the applied filters.
             </div>
             <button
               onClick={() => {
@@ -274,7 +274,7 @@ const Projects = ({ projects }) => {
               className="text-primary hover:underline transition-colors"
               aria-label="Afficher tous les projets"
             >
-              Afficher tous les projets
+              Show all projects
             </button>
           </div>
         ) : (

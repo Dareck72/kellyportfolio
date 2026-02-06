@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 const MediaFormat = ({ media , moved }) => {
+
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
 
