@@ -25,12 +25,20 @@ const router = createBrowserRouter([
 
 function App() {
   useEffect(() => {
+    console.log("refreshing");
+    refreshToken().catch(() => {
+      console.log("Refresh failed, logout user");
+      localStorage.clear();
+    });
+
     const interval = setInterval(() => {
-      refreshToken().catch(() => {
+      console.log("refreshing");
+      const a = refreshToken().catch(() => {
         console.log("Refresh failed, logout user");
         localStorage.clear();
       });
-    }, 6000); // 10 minutes
+      console.log(a);
+    }, 100000); // 10 minutes
 
     return () => clearInterval(interval);
   }, []);
@@ -38,7 +46,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      <Fouter/>
+      <Fouter />
     </QueryClientProvider>
   );
 }

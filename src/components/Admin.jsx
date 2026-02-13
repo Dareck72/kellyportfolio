@@ -315,6 +315,7 @@ const Admin = () => {
                         key={project.id}
                         project={project}
                         onDeleteRequest={requestDeleteConfirmation}
+                        onUpdateRequest={null}
                         onQuickEdit={handleQuickEdit}
                       />
                     ))

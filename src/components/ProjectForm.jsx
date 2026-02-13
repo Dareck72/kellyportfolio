@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navigation from "./Nav";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useCreateProject } from "../hooks/useCreateProject";
 import FieldError from "./FieldError";
 import FormOverlay from "./FormOverlay";
@@ -10,7 +10,14 @@ const ProjectForm = () => {
   const formRef = useRef(null);
   const { mutate, isPending, error } = useCreateProject();
   const [fieldErrors, setFieldErrors] = useState({});
-
+  // verification 
+  useEffect(() => {
+    const access = localStorage.getItem("access");
+    if (!access) {
+      navigate("/connexion");
+      return;
+    }
+  }, [navigate]);
   // États pour gérer les données du formulaire
   const [formData, setFormData] = useState({
     titre: "" ,

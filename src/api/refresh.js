@@ -3,11 +3,14 @@ import axios from "axios";
 
 export const refreshToken = async () => {
   const refresh = localStorage.getItem("refresh");
-    if (refresh) {
+  if (refresh) {
     const { data } = await axios.post(
     "https://dkhportfolio.pythonanywhere.com/api/auth/token/refresh/",
     { refresh }
   );
-  localStorage.setItem("access", data.access);
+  localStorage.setItem("access", data.access)
+      ;
+    const response = await data.json(); 
+    console.log(response)
 }
 };

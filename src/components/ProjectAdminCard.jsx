@@ -3,12 +3,17 @@
 import { useDeleteProject } from "../hooks/useDeleteProject";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
-const ProjectAdminCard = ({ project, onDeleteRequest, edit }) => {
+const ProjectAdminCard = ({ project, onDeleteRequest }) => {
   const { mutate, isPending: isDeleting } = useDeleteProject();
+  const navigate = useNavigate();
   const onDelete = () => {
     onDeleteRequest(project);
     mutate(project.id);
+  };
+  const onUpdate = () => {
+    navigate(`/edit-project/${project.id}`);
   };
   return (
     <div className="flex items-center justify-between p-4 mb-3 bg-white rounded-lg border border-gray-200 hover:border-primary transition-colors group">
@@ -41,18 +46,12 @@ const ProjectAdminCard = ({ project, onDeleteRequest, edit }) => {
       </div>
 
       <div className="flex items-center gap-2">
-        {/* <button
-          onClick={onEdit}
+        <button
+          onClick={onUpdate}
           className="p-2 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors"
-          title="Modifier"
-          disabled={isUpdating}
-        >
-          {isUpdating ? (
-            <div className="w-4 h-4 border-2 border-blue-300 border-t-blue-600 rounded-full animate-spin" />
-          ) : (
+          title="Modifier">
             <FontAwesomeIcon icon={faEdit} />
-          )}
-        </button> */}
+        </button>
 
         <button
           onClick={onDelete}
